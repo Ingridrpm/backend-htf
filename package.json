@@ -1,0 +1,27 @@
+{
+  "name": "backend-htf",
+  "version": "1.0.0",
+  "description": "Pruebas técnicas para Back-end Developer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start-gendoc": "node swagger.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ingridrpm/backend-htf.git"
+  },
+  "author": {
+    "name": "Ingrid Pérez",
+    "email": "ingridperezmena@gmail.com"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/Ingridrpm/backend-htf#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mariadb": "^3.1.1",
+    "swagger-autogen": "^2.23.1",
+    "swagger-ui-express": "^4.6.2"
+  }
+}

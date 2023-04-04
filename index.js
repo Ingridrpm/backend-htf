@@ -1,0 +1,21 @@
+/*
+ * Al correr el proyecto, se puede ver la documentación en: http://localhost:3000/documentacion
+ */
+
+
+const swaggerUi = require('swagger-ui-express')
+const swaggerFile = require('./swagger-output.json')
+const bodyParser = require('body-parser')
+const express = require('express')
+const app = express()
+
+/* Middlewares */
+app.use(bodyParser.json())
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+
+app.listen(3000, () => {
+  console.log("Server is running!\nAPI documentation: http://localhost:3000/doc")
+})
+
+/* Endpoints */
+require('./src/api')(app)
